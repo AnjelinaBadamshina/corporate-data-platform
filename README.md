@@ -25,3 +25,37 @@
 Бадамшина Ангелина Фидануровна
 ## Группа
 ЭУ-212
+
+## Docker
+
+Первый сервис платформы контейнеризирован с помощью Docker.
+
+Для сборки образа используется команда:
+
+```text
+docker build -t corporate-data-app:2.0 ./app
+```
+
+Для создания и запуска контейнера используется команда:
+
+```text
+docker run -d -p 8000:8000 --name corporate-data-container-v2 corporate-data-app:2.0
+```
+
+После запуска сервис доступен по адресу:
+
+```text
+http://localhost:8000
+```
+
+Для остановки контейнера используется команда:
+
+```text
+docker stop corporate-data-container-v2
+```
+
+Для удаления остановленного контейнера используется команда:
+
+```text
+docker rm corporate-data-container-v2
+```
