@@ -59,3 +59,39 @@ docker stop corporate-data-container-v2
 ```text
 docker rm corporate-data-container-v2
 ```
+## Docker Compose
+
+Платформа содержит многоконтейнерное приложение.
+
+На текущем этапе используются два сервиса:
+
+- `app` – Python-приложение;
+- `db` – PostgreSQL.
+
+Для запуска платформы:
+
+```text
+docker compose up -d --build
+```
+
+Проверка состояния:
+
+```text
+docker compose ps
+```
+
+Просмотр журналов:
+
+```text
+docker compose logs
+```
+
+Остановка:
+
+```text
+docker compose down
+```
+
+После запуска приложение доступно по адресу:
+
+http://localhost:8000
